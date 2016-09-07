@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   end
 
   def index
-    @contacts_array = Contact.all
+    @contacts_array = Contact.order(name: "asc")
 
     render :index
   end
@@ -31,5 +31,12 @@ class ContactsController < ApplicationController
     else
       redirect_to("/contacts/new")
     end
+  end
+
+
+  def show
+    @the_contact = Contact.find( params[:id] )
+
+    render :show
   end
 end

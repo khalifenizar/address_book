@@ -2,7 +2,9 @@
 
 <ul>
   <% @contacts_array.each do |the_contact| %>
-    <li> <%= the_contact.name %> </li>
+    <li>
+      <%= link_to the_contact.name, contact_path(the_contact) %>
+    </li>
   <% end %>
 </ul>
 

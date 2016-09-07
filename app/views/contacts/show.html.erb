@@ -1,0 +1,24 @@
+<h2> <%= @the_contact.name %> </h2>
+
+<ul>
+  <li>
+    <h3> Address </h3>
+    <pre> <%= @the_contact.address %> </pre>
+  </li>
+
+  <li>
+    <h3> Email </h3>
+    <a href="mailto:<%= @the_contact.email_address %>" target="_blank">
+      <%= @the_contact.email_address %>
+    </a>
+  </li>
+
+  <li>
+    <h3> Phone </h3>
+    <p> <%= @the_contact.phone_number %> </p>
+  </li>
+</ul>
+
+<a href="/contacts">
+  Back to the list
+</a>
